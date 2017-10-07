@@ -13,6 +13,7 @@
 		55FC4E8C1F889AAE00AE7D35 /* OnMyWay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55FC4E8A1F889AAE00AE7D35 /* OnMyWay.xcdatamodeld */; };
 		55FC4E8E1F889AAE00AE7D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55FC4E8D1F889AAE00AE7D35 /* Assets.xcassets */; };
 		55FC4E911F889AAE00AE7D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FC4E8F1F889AAE00AE7D35 /* LaunchScreen.storyboard */; };
+		55FC4E991F88A78D00AE7D35 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC4E981F88A78D00AE7D35 /* OrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		55FC4E8D1F889AAE00AE7D35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55FC4E901F889AAE00AE7D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55FC4E921F889AAE00AE7D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55FC4E981F88A78D00AE7D35 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				55FC4E831F889AAE00AE7D35 /* AppDelegate.swift */,
 				55FC4E851F889AAE00AE7D35 /* ViewController.swift */,
 				55FC4E871F889AAE00AE7D35 /* Main.storyboard */,
+				55FC4E981F88A78D00AE7D35 /* OrderViewController.swift */,
 				55FC4E8D1F889AAE00AE7D35 /* Assets.xcassets */,
 				55FC4E8F1F889AAE00AE7D35 /* LaunchScreen.storyboard */,
 				55FC4E921F889AAE00AE7D35 /* Info.plist */,
@@ -142,6 +145,7 @@
 				55FC4E861F889AAE00AE7D35 /* ViewController.swift in Sources */,
 				55FC4E841F889AAE00AE7D35 /* AppDelegate.swift in Sources */,
 				55FC4E8C1F889AAE00AE7D35 /* OnMyWay.xcdatamodeld in Sources */,
+				55FC4E991F88A78D00AE7D35 /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
