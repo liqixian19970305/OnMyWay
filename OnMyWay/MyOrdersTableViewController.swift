@@ -10,6 +10,7 @@ import UIKit
 
 class MyOrdersTableViewController: UITableViewController {
 
+    private var refreshOrders = [Array<Order>]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
