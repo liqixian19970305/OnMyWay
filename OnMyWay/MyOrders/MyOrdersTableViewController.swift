@@ -10,7 +10,12 @@ import UIKit
 
 class MyOrdersTableViewController: UITableViewController {
 
-    private var orders = [Array<Order>]()
+    private var orders = [Array<Order>]() {
+        didSet {
+            print(orders)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +35,7 @@ class MyOrdersTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return orders.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
