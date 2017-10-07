@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Orders-->
         <scene sceneID="1v7-Fb-vF5">
             <objects>
                 <viewController id="yP6-g4-fdW" sceneMemberID="viewController">
@@ -29,13 +29,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="gyb-Of-CNo"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="mXw-zE-m2p"/>
+                    <tabBarItem key="tabBarItem" title="My Orders" id="mXw-zE-m2p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i4H-Oq-Q9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="154" y="-242"/>
         </scene>
-        <!--Order View Controller-->
+        <!--Order Now-->
         <scene sceneID="7fr-cS-ZvE">
             <objects>
                 <viewController id="fco-tA-Gfp" customClass="OrderViewController" customModule="OnMyWay" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,14 +45,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="mqK-V9-pQB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="60R-Vh-ynt"/>
+                    <tabBarItem key="tabBarItem" title="Order Now" id="60R-Vh-ynt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hei-UV-WkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-798" y="238"/>
         </scene>
-        <!--View Controller-->
+        <!--Map-->
         <scene sceneID="heH-p0-dnQ">
             <objects>
                 <viewController id="QUi-tf-sS0" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="RS4-AO-VXL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="hGS-iL-lq9"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="hGS-iL-lq9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDQ-Ix-PMh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
