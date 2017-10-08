@@ -20,11 +20,7 @@
 		55FC4E9F1F88B27B00AE7D35 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC4E9E1F88B27B00AE7D35 /* Order.swift */; };
 		55FC4EA11F8951C100AE7D35 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FC4EA01F8951C100AE7D35 /* Order.storyboard */; };
 		55FC4EA51F8976C300AE7D35 /* Backup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55FC4EA41F8976C300AE7D35 /* Backup.storyboard */; };
-<<<<<<< HEAD
 		55FC4EA91F89945E00AE7D35 /* OrderCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FC4EA81F89945E00AE7D35 /* OrderCollection.swift */; };
-=======
-		A2046E551F897FEB00FF17AF /* Backup2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2046E541F897FEB00FF17AF /* Backup2.storyboard */; };
->>>>>>> 7f70f637c42c5435f8a390d341e789235e01c7c0
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,11 +39,7 @@
 		55FC4E9E1F88B27B00AE7D35 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		55FC4EA01F8951C100AE7D35 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		55FC4EA41F8976C300AE7D35 /* Backup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Backup.storyboard; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		55FC4EA81F89945E00AE7D35 /* OrderCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollection.swift; sourceTree = "<group>"; };
-=======
-		A2046E541F897FEB00FF17AF /* Backup2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Backup2.storyboard; sourceTree = "<group>"; };
->>>>>>> 7f70f637c42c5435f8a390d341e789235e01c7c0
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				55FC4EA41F8976C300AE7D35 /* Backup.storyboard */,
-				A2046E541F897FEB00FF17AF /* Backup2.storyboard */,
 			);
 			path = Backup;
 			sourceTree = "<group>";
@@ -196,7 +187,6 @@
 				55FC4EA51F8976C300AE7D35 /* Backup.storyboard in Resources */,
 				55FC4E891F889AAE00AE7D35 /* Main.storyboard in Resources */,
 				55FC4EA11F8951C100AE7D35 /* Order.storyboard in Resources */,
-				A2046E551F897FEB00FF17AF /* Backup2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
