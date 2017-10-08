@@ -7,19 +7,18 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class MapViewController: UIViewController {
 
-    private var orders = OrderCollection() {
-        didSet {
-            print(orders)
-        }
+    override func loadView() {
+        let camera = GMSCameraPosition.camera(withLatitude: 1.285, longitude: 103.848, zoom: 12)
+        let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
+        self.view = mapView
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ID: String = orders.addOrder(location: "Berkeley", item: "Chicken")
         // Do any additional setup after loading the view.
     }
 
