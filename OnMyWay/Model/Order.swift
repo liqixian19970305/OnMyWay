@@ -7,7 +7,8 @@
 //
 
 import Foundation
-class Order {
+struct Order {
+    var ID: String
     var time: Date
     var location: String
     var item: String
@@ -21,15 +22,16 @@ class Order {
         case ready
         case completed
     }
-    init (time: Date, location: String, item: String, tips: Double = 0, comment: String = "", status: Status = .pending) {
-        self.time = time
+    init (location: String, item: String, tips: Double = 0, comment: String = "", status: Status = .pending) {
+        self.ID = UUID().uuidString
+        self.time = Date()
         self.location = location
         self.item = item
         self.tips = tips
         self.comment = comment
         self.status = status
     }
- func changeStatus(newStatus: Status) {
+    mutating func changeStatus(newStatus: Status) {
         status = newStatus
     }
 }

@@ -10,14 +10,27 @@ import UIKit
 
 class MyOrdersTableViewController: UITableViewController {
 
-    private var orders = [Array<Order>]() {
+    private var orders = OrderCollection() {
         didSet {
-            print(orders)
+            refreshOrdersArray()
         }
     }
     
+    private var ordersArray = [Array<Order>]()
+    
+    private func refreshOrdersArray() {
+        for i in 0..<orders.collection.count {
+            ordersArray.append([Order](orders.collection[i].values))
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ID: String = orders.addOrder(location: "Berkeley", item: "Chicken")
+        orders.addOrder(location: "UCLA", item: "Beef")
+        refreshOrdersArray()
+        
+        //print(ID)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,23 +48,26 @@ class MyOrdersTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return orders.count
+        return ordersArray.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return ordersArray[section].count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentOrder", for: indexPath)
 
         // Configure the cell...
-
+        let order: Order = ordersArray[indexPath.section][indexPath.row]
+        if let orderCell = cell as? MyOrdersTableViewCell {
+            orderCell.order = order
+        }
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
