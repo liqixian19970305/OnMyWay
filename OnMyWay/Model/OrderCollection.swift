@@ -39,6 +39,12 @@ class OrderCollection {
         }
     }
     
+    public func changeToCompleted (ID: String) {
+        if let order = collection[1].removeValue(forKey: ID) {
+            collection[2].updateValue(order, forKey: ID)
+        }
+    }
+    
     public func addOrder(location: String, item: String) -> String {
         let newOrder = Order(location: location, item: item)
         
