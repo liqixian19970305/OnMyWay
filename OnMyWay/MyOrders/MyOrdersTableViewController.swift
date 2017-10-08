@@ -26,8 +26,9 @@ class MyOrdersTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ID: String = orders.addOrder(location: "Berkeley", item: "Chicken")
+        let ID1: String = orders.addOrder(location: "Berkeley", item: "Chicken")
         orders.addOrder(location: "UCLA", item: "Beef")
+        orders.changeToReady(ID: ID1)
         refreshOrdersArray()
         
         //print(ID)
@@ -66,6 +67,19 @@ class MyOrdersTableViewController: UITableViewController {
             orderCell.order = order
         }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Current orders"
+        case 1:
+            return "Ready orders"
+        case 2:
+            return "Completed orders"
+        default:
+            return "unknown"
+        }
     }
     
 
