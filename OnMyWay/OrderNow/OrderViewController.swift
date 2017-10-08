@@ -69,7 +69,23 @@ class OrderViewController: UIViewController, AudioControllerDelegate {
                                 }
                             }
                         }
-                        strongSelf.textView.text = response.description
+                        
+                        //strongSelf.textView.text = response.description
+                        if finished {
+                            for result in response.resultsArray! {
+                                if let result = result as? StreamingRecognitionResult {
+                                    if let alternative = result.alternativesArray[0] as? SpeechRecognitionAlternative{
+                                        strongSelf.textView.text = alternative.transcript!
+                                        let parser: Parser = Parser()
+                                        var (item, location) = parser.match(transcript: alternative.transcript!)
+                                        
+                                        
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
                         if finished {
                             strongSelf.stopAudio(strongSelf)
                         }
