@@ -33,9 +33,9 @@ class OrderCollection {
         return nil
     }
     
-    public func changeToReady (ID: String) {
+    /*public func changeToReady (ID: String) {
         if let collection[0].removeValue(forKey: ID)
-    }
+    }*/
     
     public func addOrder(location: String, item: String) -> String {
         let newOrder = Order(location: location, item: item)
