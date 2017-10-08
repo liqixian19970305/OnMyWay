@@ -10,7 +10,6 @@ import Foundation
 class OrderCollection {
     var collection = [Dictionary<String, Order>]()
     
-    
     init() {
         let currentDictionary = [String: Order]()
         let readyDictionary = [String: Order]()
@@ -47,14 +46,7 @@ class OrderCollection {
     
     public func addOrder(location: String, item: String) -> String {
         let newOrder = Order(location: location, item: item)
-        
-        /*var testarray = [Dictionary<String, Int>]()
-        var array1 = [String: Int]()
-        testarray.append(array1)
-        testarray[0].updateValue(1, forKey: "123")
-        print(testarray[0]["123"])*/
         collection[0].updateValue(newOrder, forKey: newOrder.ID)
-        //let aDictionary = collection[0]
         return newOrder.ID
         
     }
