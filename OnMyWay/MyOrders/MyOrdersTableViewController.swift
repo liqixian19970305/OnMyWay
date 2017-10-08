@@ -10,7 +10,7 @@ import UIKit
 
 class MyOrdersTableViewController: UITableViewController {
 
-    private var orders = OrderCollection() {
+    public var orders = OrderCollection() {
         didSet {
             refreshOrdersArray()
         }

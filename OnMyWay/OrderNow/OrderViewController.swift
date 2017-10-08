@@ -12,16 +12,23 @@ import AVFoundation
 import googleapis
 
 let SAMPLE_RATE = 16000
-class OrderViewController: UIViewController, AudioControllerDelegate {
+class OrderViewController: UIViewController, AudioControllerDelegate, UITextFieldDelegate {
     
     //@IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var itemTextField: UITextField!
     
+    @IBOutlet weak var locationTextField: UITextField!
     var audioData: NSMutableData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         AudioController.sharedInstance.delegate = self
+        itemTextField.delegate = self;
+        locationTextField.delegate = self;
+    }
+    @IBAction func confirmOrder(_ sender: UIButton) {
+        
     }
     
     @IBAction func recordAudio(_ sender: NSObject) {
@@ -41,6 +48,17 @@ class OrderViewController: UIViewController, AudioControllerDelegate {
         _ = AudioController.sharedInstance.stop()
         SpeechRecognitionService.sharedInstance.stopStreaming()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = navigationController?.topViewController as! MyOrdersTableViewController;
+        //viewController = self.estRent;
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
     func processSampleData(_ data: Data) -> Void {
         audioData.append(data)
         
@@ -78,8 +96,8 @@ class OrderViewController: UIViewController, AudioControllerDelegate {
                                         strongSelf.textView.text = alternative.transcript!
                                         let parser: Parser = Parser()
                                         var (item, location) = parser.match(transcript: alternative.transcript!)
-                                        
-                                        
+                                        self!.itemTextField.text! = item
+                                        self!.locationTextField.text! = location
                                     }
                                 }
                             }
