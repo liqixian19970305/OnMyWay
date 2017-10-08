@@ -14,6 +14,7 @@ import googleapis
 let SAMPLE_RATE = 16000
 class OrderViewController: UIViewController, AudioControllerDelegate, UITextFieldDelegate {
     
+    public var orders: OrderCollection = OrderCollection()
     //@IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var itemTextField: UITextField!
@@ -28,7 +29,10 @@ class OrderViewController: UIViewController, AudioControllerDelegate, UITextFiel
         locationTextField.delegate = self;
     }
     @IBAction func confirmOrder(_ sender: UIButton) {
-        
+        orders.addOrder(location: locationTextField.text!, item: itemTextField.text!)
+        var viewController = self.tabBarController?.viewControllers![2] as! MyOrdersTableViewController
+        viewController.orders = orders
+        tabBarController?.selectedIndex = 2
     }
     
     @IBAction func recordAudio(_ sender: NSObject) {
@@ -49,10 +53,6 @@ class OrderViewController: UIViewController, AudioControllerDelegate, UITextFiel
         SpeechRecognitionService.sharedInstance.stopStreaming()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let viewController = navigationController?.topViewController as! MyOrdersTableViewController;
-        //viewController = self.estRent;
-    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)

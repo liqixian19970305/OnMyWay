@@ -142,7 +142,7 @@
                             <outlet property="delegate" destination="zF3-Xy-95X" id="s8o-3d-BeY"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="News" id="aE0-Ma-6GO"/>
+                    <tabBarItem key="tabBarItem" title="MyOrders" id="aE0-Ma-6GO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EU1-fm-4Zd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,7 +181,6 @@
                                 <state key="normal" title="confirm"/>
                                 <connections>
                                     <action selector="confirmOrder:" destination="fco-tA-Gfp" eventType="touchUpInside" id="tGW-o4-7d1"/>
-                                    <segue destination="tDo-i8-9bh" kind="presentation" id="haf-i1-UQn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eem-gX-aKt">
@@ -908,9 +907,9 @@
         <image name="Receipt" width="240" height="427"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hYk-qu-MUU"/>
+        <segue reference="kW0-jh-4Js"/>
         <segue reference="RgL-dh-fUU"/>
-        <segue reference="3O5-m2-v9O"/>
+        <segue reference="LFP-1A-MdI"/>
         <segue reference="mAH-zn-6MD"/>
     </inferredMetricsTieBreakers>
 </document>

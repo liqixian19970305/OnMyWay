@@ -10,7 +10,7 @@ import UIKit
 
 class MyOrdersTableViewController: UITableViewController {
 
-    public var orders = OrderCollection() {
+    public var orders: OrderCollection = OrderCollection() {
         didSet {
             refreshOrdersArray()
         }
@@ -19,6 +19,7 @@ class MyOrdersTableViewController: UITableViewController {
     private var ordersArray = [Array<Order>]()
     
     private func refreshOrdersArray() {
+        ordersArray.removeAll()
         for i in 0..<orders.collection.count {
             ordersArray.append([Order](orders.collection[i].values))
         }
@@ -26,9 +27,6 @@ class MyOrdersTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ID1: String = orders.addOrder(location: "Berkeley", item: "Chicken")
-        orders.addOrder(location: "UCLA", item: "Beef")
-        orders.changeToReady(ID: ID1)
         refreshOrdersArray()
         
         //print(ID)
